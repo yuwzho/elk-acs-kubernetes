@@ -11,10 +11,9 @@ RUN apt-get update \
 
 # Install Java
 RUN echo "Installing Java."
-RUN add-apt-repository -y ppa:webupd8team/java \
+RUN add-apt-repository -y ppa:openjdk-r/ppa \
   && apt-get update \
-  && echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections \
-  && apt-get install -y --force-yes oracle-java8-installer
+  && apt-get install -y openjdk-8-jre
 
 ENV VERSION 5.4.0
 ENV PLATFORM linux-x86_64
