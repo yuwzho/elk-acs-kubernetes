@@ -14,7 +14,7 @@ script:
 deploy:
   provider: releases
   api_key: ${github_token}
-  file: "elk-${deploy_tag}.zip"
+  file: "solution.zip"
   skip_cleanup: true
   on:
     branch: release
