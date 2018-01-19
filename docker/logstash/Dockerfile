@@ -7,7 +7,7 @@ EXPOSE 5043
 # Install Utilities
 RUN echo "Installing utilities."
 RUN apt-get update \
-  && apt-get -y --force-yes install software-properties-common python-software-properties debconf-utils
+  && apt-get -y --force-yes install software-properties-common python-software-properties debconf-utils wget
 
 # Install Java
 RUN echo "Installing Java."
